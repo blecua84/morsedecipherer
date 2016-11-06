@@ -38,7 +38,9 @@ Even with a dictionary, a Morse sequence can have different human sentences.
 You’re mission is to write the function able to find all the possible human solutions for a given Morse Sentence (For a given Morse sentence, you have to return each combination of possible human words of the dictionary with no dot or line remaining …)
 
 The function should take different parameters:
+
   ➢	the dictionary as a list of the possible human words (10 000 more frequent English words provided)
+  
   ➢	the Morse sentence to solve
 
 Return: a list of possible human sentences.
