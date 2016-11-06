@@ -10,11 +10,11 @@ import java.util.Set;
 public interface Decipherer {
 
     /**
-     * It returns one combination for the morse input "message". It'll take the words from an internal library loaded
+     * It returns all the combinations for the morse input "message". It'll take the words from an internal library loaded
      * at the beginning of the application.
      *
      * @param message Message to decipher.
-     * @return String with the combination for the message.
+     * @return Set<String> with all the combinations for the input "message".
      */
     Set<String> decipherer(String message);
 }
