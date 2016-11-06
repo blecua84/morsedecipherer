@@ -53,9 +53,9 @@ public class MorseDeciphererApplication {
         return morseWordsMap;
     }
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
         log.info("Init main...");
-		SpringApplication.run(MorseDeciphererApplication.class, args);
+        SpringApplication.run(MorseDeciphererApplication.class, args);
 
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your morse phase: ");
@@ -65,9 +65,9 @@ public class MorseDeciphererApplication {
         Decipherer decipherer = new DeciphererImpl();
         Set<String> decipheredPhrasesResult = decipherer.decipherer(morseMessage, morseLibrary());
 
-        if(!decipheredPhrasesResult.isEmpty()) {
+        if (!decipheredPhrasesResult.isEmpty()) {
             System.out.println("Result translations: ");
-            for(String translation: decipheredPhrasesResult) {
+            for (String translation : decipheredPhrasesResult) {
                 System.out.println("Translation: " + translation);
             }
         } else {
@@ -75,5 +75,5 @@ public class MorseDeciphererApplication {
         }
 
         log.info("End main!!");
-	}
+    }
 }
