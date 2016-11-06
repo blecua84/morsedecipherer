@@ -57,14 +57,13 @@ public class MorseDeciphererApplication {
         log.info("Init main...");
 		SpringApplication.run(MorseDeciphererApplication.class, args);
 
-        Decipherer decipherer = new DeciphererImpl(morseLibrary());
-
         Scanner input = new Scanner(System.in);
         System.out.print("Enter your morse phase: ");
         String morseMessage = input.next();
         log.info("Input phrase: " + morseMessage);
 
-        Set<String> decipheredPhrasesResult = decipherer.decipherer(morseMessage);
+        Decipherer decipherer = new DeciphererImpl();
+        Set<String> decipheredPhrasesResult = decipherer.decipherer(morseMessage, morseLibrary());
 
         if(!decipheredPhrasesResult.isEmpty()) {
             System.out.println("Result translations: ");

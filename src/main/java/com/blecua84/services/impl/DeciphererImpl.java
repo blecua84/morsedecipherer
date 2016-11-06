@@ -23,18 +23,18 @@ public class DeciphererImpl implements Decipherer {
     private Set<String> partialLibrary;
 
     /**
-     * Constructor used by Main Configuration class for creating the bean depending its interface.
-     *
-     * @param morseLibrary Library Morse Words.
+     * Constructor.
      */
-    public DeciphererImpl(Map<String, String> morseLibrary) {
-        this.morseLibrary = morseLibrary;
+    public DeciphererImpl() {
         this.partialLibrary = new HashSet<>();
     }
 
     @Override
-    public Set<String> decipherer(String message) {
+    public Set<String> decipherer(String message, Map<String, String> morseLibrary) {
         log.info("Init decipherer...");
+
+        // Save the morseLibrary
+        this.morseLibrary = morseLibrary;
 
         // Clear the list where the results will be stored
         this.partialLibrary.clear();
